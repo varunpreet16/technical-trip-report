@@ -1,0 +1,679 @@
+
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
+:root {
+    --cream: #f8f6ef;
+    --white: #ffffff;
+    --green: #294b3b;
+    --dark-green: #1b3529;
+    --sage: #dce5d8;
+    --beige: #eee8dc;
+    --orange: #bd8054;
+    --text: #343a34;
+    --muted: #777c73;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    scroll-margin-top: 85px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    height: 80px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--cream);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #e8e3d9;
+}
+
+.logo {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--green);
+}
+
+.logo span {
+    font-weight: 400;
+    color: var(--orange);
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav a {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: var(--green);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: var(--green);
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 650px;
+    padding: 75px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: var(--orange);
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 7vw, 88px);
+    color: var(--dark-green);
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--orange);
+    font-style: italic;
+}
+
+.hero-description {
+    max-width: 480px;
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 35px;
+}
+
+.hero-info {
+    display: flex;
+    gap: 55px;
+    margin-bottom: 35px;
+}
+
+.hero-info small,
+.detail-item small {
+    color: var(--orange);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.hero-info p {
+    color: var(--green);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.primary-btn {
+    display: inline-block;
+    background: var(--green);
+    color: white;
+    padding: 14px 27px;
+    font-size: 13px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background: var(--dark-green);
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    height: 470px;
+    border-radius: 180px 180px 5px 5px;
+}
+
+.image-caption {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--muted);
+    padding-top: 15px;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+    padding: 100px 10%;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: clamp(35px, 4vw, 48px);
+    color: var(--dark-green);
+}
+
+.section-subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.center {
+    text-align: center;
+}
+
+
+/* =========================
+   INTRODUCTION
+========================= */
+
+.introduction {
+    background: var(--white);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.intro-text p,
+.recommendation-content p,
+.conclusion-box p,
+.learning-content p {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.intro-note {
+    background: var(--sage);
+    padding: 40px;
+    border-radius: 5px;
+}
+
+.note-icon {
+    font-size: 35px;
+    color: var(--orange);
+}
+
+.intro-note h3 {
+    font-size: 25px;
+    color: var(--green);
+    margin: 15px 0;
+}
+
+.intro-note p {
+    color: #68766a;
+    font-size: 14px;
+}
+
+
+/* =========================
+   OBJECTIVES
+========================= */
+
+.objectives {
+    background: var(--cream);
+}
+
+.objective-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.objective-card {
+    background: var(--white);
+    padding: 30px 24px;
+    border-bottom: 3px solid var(--sage);
+    transition: 0.3s;
+}
+
+.objective-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--orange);
+}
+
+.objective-card span {
+    color: var(--orange);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+}
+
+.objective-card h3 {
+    color: var(--green);
+    font-size: 21px;
+    margin: 20px 0 12px;
+}
+
+.objective-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* =========================
+   TRIP DETAILS
+========================= */
+
+.trip-details {
+    background: var(--green);
+}
+
+.trip-details .section-heading h2 {
+    color: var(--cream);
+}
+
+.trip-details .eyebrow {
+    color: #d7b28c;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #597064;
+}
+
+.detail-item {
+    padding: 35px;
+    background: var(--green);
+}
+
+.detail-item h3 {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--cream);
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+
+/* =========================
+   ACTIVITIES
+========================= */
+
+.activities {
+    background: var(--white);
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.activity-item {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.activity-item.reverse .activity-image {
+    order: 3;
+}
+
+.activity-item.reverse .activity-content {
+    order: 2;
+}
+
+.activity-number {
+    font-family: 'Playfair Display', serif;
+    color: var(--orange);
+    font-size: 28px;
+    align-self: start;
+}
+
+.activity-image img {
+    height: 310px;
+    border-radius: 4px;
+}
+
+.activity-content h3 {
+    font-size: 29px;
+    color: var(--green);
+    margin-bottom: 20px;
+}
+
+.activity-content > p:last-child {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+
+/* =========================
+   LEARNINGS
+========================= */
+
+.learnings {
+    background: var(--sage);
+}
+
+.learning-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.learning-content p {
+    color: #59675b;
+}
+
+
+/* =========================
+   CONCLUSION
+========================= */
+
+.conclusion {
+    background: var(--white);
+}
+
+.conclusion-box {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.conclusion-box h2 {
+    font-size: 48px;
+    color: var(--green);
+    margin-bottom: 30px;
+}
+
+.conclusion-box p {
+    text-align: center;
+}
+
+
+/* =========================
+   RECOMMENDATIONS
+========================= */
+
+.recommendations {
+    background: var(--cream);
+}
+
+.recommendation-content {
+    max-width: 850px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    background: var(--beige);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.gallery-grid img {
+    height: 250px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: var(--dark-green);
+    color: var(--cream);
+    text-align: center;
+    padding: 75px 10% 30px;
+}
+
+.footer h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #c4d0c6;
+}
+
+.footer-line {
+    height: 1px;
+    background: #53685b;
+    margin: 45px 0 25px;
+}
+
+.footer small {
+    color: #bdc9bf;
+    font-size: 11px;
+}
+
+.back-top {
+    display: block;
+    color: #e2b58e;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 950px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .navbar nav {
+        gap: 13px;
+    }
+
+    .navbar nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 60px 6%;
+        gap: 30px;
+    }
+
+    .section {
+        padding: 80px 7%;
+    }
+
+    .objective-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-grid {
+        gap: 35px;
+    }
+
+    .activity-item {
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: var(--cream);
+        flex-direction: column;
+        gap: 18px;
+        border-bottom: 1px solid #e8e3d9;
+    }
+
+    .navbar nav.active {
+        display: flex;
+    }
+
+    .navbar nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 60px 7%;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    .hero-image img {
+        height: 350px;
+    }
+
+    .hero-info {
+        gap: 30px;
+    }
+
+    .section {
+        padding: 70px 7%;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .objective-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .detail-item {
+        padding: 22px 15px;
+    }
+
+    .detail-item h3 {
+        font-size: 14px;
+    }
+
+    .activity-item {
+        grid-template-columns: 35px 1fr;
+    }
+
+    .activity-image,
+    .activity-item.reverse .activity-image {
+        grid-column: 2;
+        order: 2;
+    }
+
+    .activity-content,
+    .activity-item.reverse .activity-content {
+        grid-column: 2;
+        order: 3;
+    }
+
+    .activity-image img {
+        height: 230px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid img {
+        height: 170px;
+    }
+
+    .conclusion-box h2 {
+        font-size: 38px;
+    }
+
+    .footer h2 {
+        font-size: 27px;
+    }
+}
